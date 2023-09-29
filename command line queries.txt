@@ -1,0 +1,6 @@
+curl "http://localhost:5000/embeddings?sentence=the+quick+brown+fox"
+curl -X POST -H "Content-Type: application/json" -d @payload_2.json http://localhost:5000/embeddings/bulk
+curl -X POST -H "Content-Type: application/json" -d @payload_3.json http://localhost:5000/embeddings/similarity
+
+netstat -ano | findstr :5000
+taskkill /PID 13928 /F
